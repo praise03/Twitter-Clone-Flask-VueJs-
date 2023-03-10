@@ -90,7 +90,7 @@ class User(db.Model):
     def generate_token(self):
         try:
             payload = {
-                'exp': datetime.datetime.utcnow() + datetime.timedelta(seconds=3),
+                'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=2),
                 'iat': datetime.datetime.utcnow(),
                 'sub': self.id
             }
@@ -106,7 +106,7 @@ class User(db.Model):
     def decode_token(token):
         try:
             payload = jwt.decode(token, 'secret_key', algorithms=['HS256'])
-            return payload['sub']
+            return True if payload['sub'] else False
         except jwt.ExpiredSignatureError:
             return 'Token Expired'
         except jwt.InvalidTokenError:
@@ -186,4 +186,4 @@ class Comment(db.Model):
             replies_arr.append(reply.comment_to_json())
         return replies_arr
 
-db.create_all()
+# db.create_all()

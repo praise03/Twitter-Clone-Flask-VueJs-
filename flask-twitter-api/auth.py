@@ -16,7 +16,7 @@ def token_required(f):
             })
 
         try:
-            valid = True if User.decode_token(token) == 1 else False
+            valid = User.decode_token(token)
 
             if valid:
                 print('Auth Successful')

@@ -1,5 +1,5 @@
 <template>
-
+  <div>
   <div v-if="errorMessage.value" class="text-red-400 container text-center">
     <h1 class="p-4 text-lg  font-semibold">{{ errorMessage.message }}</h1>
   </div>
@@ -46,13 +46,14 @@
       />
 	  <button type="button" @click.prevent="toogle"> <i class="fas fa-eye text-blue-800 -ml-8 cursor-pointer"></i> </button> 
 	  </div>
-      <input type="submit" value="Sign In"
+      <input type="submit" value="Sign Up"
         class="bg-black px-36 rounded-2xl py-2 mb-4 cursor-pointer text-white"
       />
       <router-link to="/signin" class="mb-16">Already have an account? <a class="text-blue-400">Sign in</a></router-link>
     </div>
   </div>
   </form>
+  </div>
 </template>
 
 

@@ -22,7 +22,7 @@
 						<i class="fas fa-location-dot hover:bg-blue-200 p-2 cursor-pointer rounded-full"></i>
 					</div>
 					
-					<input type="submit" class="text-white px-4 py-1 bg-twitterblue hover:bg-blue-500 rounded-3xl -mt-2" value="Tweet">
+					<input type="submit" class="text-white px-4 py-1 cursor-pointer bg-twitterblue hover:bg-blue-500 rounded-3xl -mt-2" value="Tweet">
 				</div>
 			</form>
 		</div>

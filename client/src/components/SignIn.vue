@@ -1,4 +1,5 @@
 <template>
+<div>
     <div v-if="errorMessage.value" class="text-red-400 container text-center">
       <h1 class="p-4 text-lg  font-semibold">{{ errorMessage.message }}</h1>
     </div>
@@ -6,7 +7,7 @@
       <h1 class="p-4 text-lg  font-semibold">Account created successfully. You can now Login</h1>
     </div>
     <form @submit.prevent="signIn"> 
-    <div class="bg-gray-800 p-2 h-screen">
+    <div class="bg-gray-800 backdrop-blur-md p-2 h-screen">
         <div class="bg-white flex flex-col lg:w-1/3 ml-auto mr-auto rounded-lg mt-32 justify-center items-center">
             <i class="fab fa-twitter text-blue-300 text-2xl p-4"></i>
             
@@ -22,6 +23,7 @@
         </div>
     </div>
     </form>
+    </div>
 </template>
 
 
@@ -41,8 +43,6 @@
     const router = useRouter()
     const userstore = userStore()
 
-
-    
 
 	let type = ref('password')
 	let accountCreated = ref(false)
